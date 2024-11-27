@@ -1,7 +1,7 @@
 # Data Analysis Project: Understanding Player Valuations on Game Outcomes
 
 ## **Overview**
-This project analyses football games by combining data from player market valuations (from transfermarkt.co.uk) and betting odds. By merging and transforming various datasets, we aim to uncover insights into the relationship between team valuations and outcomes. This analysis focuses on games from major leagues, including the Premier League (GB1), Bundesliga (L1), and La Liga (ES1).
+This project analyses football games by combining data from player market valuations (from transfermarkt.co.uk) and betting odds. The aim is to uncover insights into the relationship between team valuations and outcomes. This analysis focuses on games from major leagues, including the Premier League (GB1), Bundesliga (L1), and La Liga (ES1).
 
 ---
 ## **Sources**
@@ -75,27 +75,24 @@ This project analyses football games by combining data from player market valuat
 
 In this scatter plot, the valuations of the starting XI for the home and away teams are plotted against each other. Each point represents a match, and the green points indicate games where the team with the more "valuable" starting XI won.
 
-However, the high density of overlapping data points makes it challenging to draw meaningful conclusions. The plot shows general trends but lacks clarity due to data congestion around the diagonal line (`y = x`), where valuations are similar.
+However, the high density of overlapping data points makes it challenging to draw meaningful conclusions. This plot lacks clarity due to data congestion, but allows us to see the extent are data is reliable.
 
 ---
 
 ### **Heatmap: Team Valuations**
 ![image](https://github.com/user-attachments/assets/d807e7e1-a35c-4661-81fa-c9f50d44bf68)
 
-The heatmap provides a clearer visualization of the same data. The x-axis represents the valuation of the home team, while the y-axis represents the valuation of the away team. The intensity of the color indicates the density of matches with similar valuation differences.
+The heatmap provides a clearer visualization of the same data. The x-axis represents the valuation of the home team, while the y-axis represents the valuation of the away team. The intensity of the color indicates the density of matches correctly predicted by team value.
+
+Each square (bin) considers all observations that were plot on the above scatter graph. The closer the bin is to green (1.0), the more accurate our team value prediction is. The closer the bin is to red (0), the less accurate our team value prediction is.
 
 #### **Key Observations**:
 1. **Uncertainty Along the Diagonal (`y = x`)**:
-   - Matches where the valuations of both teams are nearly equal exhibit the most uncertainty in outcomes.
-   - This aligns with expectations, as closely matched teams often produce unpredictable results.
+   - Matches where the valuations of both teams are nearly equal exhibit the most uncertainty in outcomes, in the data range with the most observations. This is makes sense, as closely matched teams often produce unpredictable results.
 
 2. **Outcome Bias Towards Home Teams**:
    - As the valuation gap increases (moving away from `y = x`), the results become more predictable.
    - Interestingly, there is a noticeable bias towards home teams, with fewer unexpected outcomes favoring the away team. This supports the concept of the "12th man" advantage, where home fans contribute to their team's performance.
-
-3. **Predictability with Larger Valuation Gaps**:
-   - Matches with significant differences in valuations (either above or below the diagonal) tend to have more reliable outcomes, where the higher-valued team often secures victory.
-
 
 4. ## Valuation and Betting Odds Analysis
 
