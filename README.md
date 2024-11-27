@@ -115,9 +115,6 @@ This analysis explores the relationship between the team valuations and betting 
 
 ---
 
-
-markdown
-Copy code
 ### **Regression Analysis: Valuation Differences vs Implied Odds**
 
 #### **1. Understanding the Relationship**
